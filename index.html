@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebCode</title>
+    <link rel="icon" href="logo.png" type="image/icon type">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+    ul{
+        list-style-type: none;
+        overflow: hidden;
+        background-color:black;
+        color: white;
+    }
+    li{
+        float: left;
+    }
+    li a{
+        padding: 10px 15px;
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+    }
+    li a:hover{
+        background: gray;
+    }
+    #logo-image{
+        width: 1000px;
+        height:600px;
+    }
+    #youtube-video{
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size:27px;
+
+    }
+    .column1{
+        float: left;
+        height:280px;
+        width:50%;
+        background-color:#bcb7b7;
+
+    }
+    .column2{
+         background-color:#bcb7b7;
+         height:280px;
+        float: left;
+        width: 50%;
+
+    }
+
+    #v1{
+        position:relative;
+        top: 30px;
+    }
+    #v2{
+        position:relative;
+        top: 30px;
+    }
+    .column3{
+        background-color:#bcb7b7;
+        padding: 10px 15px 10px 15px;
+
+    }
+    .contact-form{
+        text-align:center;
+        background-color:black;
+        heigth:980px;
+        color: white;
+
+    }
+    #input-field1{
+        border-color: #FFFFFF;
+        border-width: 3px;
+        width: 350px;
+        height:25px;
+
+    }
+    #input-field2{
+        border-color: #FFFFFF;
+        border-width: 3px;
+        width: 350px;
+        height:25px;
+
+    }
+    #input-field3{
+        border-color: #FFFFFF;
+        border-width: 3px;
+        width: 350px;
+        height:25px;
+
+    }
+    #input-field-alone{
+        border-color: #FFFFFF;
+        border-width: 3px;
+        width: 350px;
+        height:250px;
+    }
+    #submitValues{
+        font-size:20px;
+    }
+
+    </style>
+</head>
+<body>
+
+<div class="top-navigation">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="https://www.youtube.com/channel/UCtf0N5S55cJyGoSto19vrew">Youtube</a></li>
+
+        <li><a href="https://www.instagram.com/adarrrrsh/?hl=en">Instagram</a></li>
+        <li><a href="#youtube-video">Our Videos</a></li>
+        <li><a href="#contact-form">Contact</a></li>
+    </ul>
+</div>
+<div class="youtube-logo">
+    <a href="#youtube-video"><img src="header.jpeg" id="logo-image"></a>
+    <hr>
+</div>
+
+<div id="youtube-video">
+    <h2>Our Videos</h2>
+    <div class="row">
+        <div class="column1"><iframe width="80%" height="80%" src="https://www.youtube.com/embed/LOmB2E6ss1U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="v1"></iframe></div>
+        <div class="column2"><iframe width="80%" height="80%" src="https://www.youtube.com/embed/WG6eZYcT7c0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="v2"></iframe></div>
+        <div class="column3"><h3><a href="https://www.youtube.com/channel/UCBKc5D1lqk8kE67Feqr2sCA">For More</a></h3></div>
+
+    </div>
+    <div><hr></div>
+    <div id="contact-form">
+    <div class="contact-form">
+        <h2>Contact Form</h2>
+    <form id="contact-us">
+        <input type="email" placeholder="Email" id="input-field1"><br>
+        <input type="text" placeholder="Name" id="input-field2"><br>
+        <input type="tel" placeholder="Phone Number (Optional)" id="input-field3"><br><br>
+        <input type="text" placeholder="Why you want to contact us" id="input-field-alone"><br>
+        <input type="submit" id="submitValues">
+    </form>
+    </div>
+    </div>
+</div>
+<script>
+    document.getElementById("submitValues").onclick = function () {
+        var email = document.getElementById("input-field1").value;
+        var name = document.getElementById("input-field2").value;
+        var information = document.getElementById("input-field-alone").value;
+        if(email.length  == 0){
+            alert("please Enter your email Id");
+        }else if(information.length == 0){
+            alert("Please enter Why you want to contact us");
+        }else if(name.length == 0){
+            alert("Please enter your name");
+        }else{
+            alert("Thanks for visting us " +name)
+        }
+
+    }
+</script>
+</body>
+</html>
